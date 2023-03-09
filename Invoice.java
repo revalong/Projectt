@@ -56,6 +56,13 @@ public class Invoice {
 	public String getDate() {
 		return date;
 	}
+	public double getTotalPrice() {
+		double total=0;
+		for(int i =0;i<it.size();i++) {
+			total+=it.get(i).getTotal();
+		}
+		return total;
+	}
 	
 	
 
@@ -68,7 +75,7 @@ public class Invoice {
 	
 	
 	public String toString() {
-		return invoice + "\t" + s.getCode() + "\t" + customer.getLastName() + ", " + customer.getFirstName() +"\t"+ salesPerson.getLastName() + ", " + salesPerson.getFirstName();
+		return invoice + "\t\t" + s.getCode() + "\t\t" + customer.getLastName() + ", " + customer.getFirstName() +"\t\t"+ salesPerson.getLastName() + ", " + salesPerson.getFirstName() + "\t\t" + getTotalPrice();
 	}
 	
 
