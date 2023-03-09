@@ -21,13 +21,22 @@ private static ArrayList<InvoiceItem> allInvoiceItem;
 public static void main(String[] args) throws FileNotFoundException {
 	reportFiles();
 
-	System.out.println("+-------------------------------------------------------------------------+\n| Sales by Customer                                                       \n|+-------------------------------------------------------------------------+");
-	System.out.println("Sale       Store      Customer             Salesperson          Total    ");
+	System.out.println("+-----------------------------------------------------------------------------------+\n| Sales by Customer                                                                 |\n+-----------------------------------------------------------------------------------+");
+	System.out.println("Sale\t\tStore\t\tCustomer\t\tSalesperson\t\tTotal");
 	for(int i =0; i<invoice.size();i++) {
 		System.out.println(invoice.get(i));
 	}
-	
-				}
+	System.out.println("+-----------------------------------------------------------------------------------+\n| Sales by Total                                                                    |\n+-----------------------------------------------------------------------------------+");
+	System.out.println("Sale\t\tStore\t\tCustomer\t\tSalesperson\t\tTotal");
+	for(int i =0; i<invoice.size();i++) {
+		System.out.println(invoice.get(i));
+	}
+	System.out.println("+-----------------------------------------------------------------------------------+\n| Sales by Store                                                                    |\n+-----------------------------------------------------------------------------------+");
+	System.out.println("Sale\t\tStore\t\tCustomer\t\tSalesperson\t\tTotal");	
+	for(int i =0; i<invoice.size();i++) {
+		System.out.println(invoice.get(i));
+	}
+}
 				
 				
 			public static void reportFiles() throws FileNotFoundException{
